@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         imgAnd = (ImageView) findViewById(R.id.ImgAnd);
 
-//        보이는 것과 안보이는 것 설정
+        // 보이는 것과 안보이는 것 설정
         chkSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -79,11 +79,20 @@ public class MainActivity extends AppCompatActivity {
             });
         }
 
-//        버튼
+        // 버튼
 
         first.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-               // onRestart();
+                //  안보이게 하기
+                text2.setVisibility(android.view.View.INVISIBLE);
+                rGroup1.setVisibility(android.view.View.INVISIBLE);
+                imgAnd.setVisibility(android.view.View.INVISIBLE);
+
+                // 스위치 버튼 체크 없애기
+                chkSwitch.setChecked(false);
+
+                // 라디오 버튼 체크 없애기
+                rGroup1.clearCheck();
             }
         });
 
